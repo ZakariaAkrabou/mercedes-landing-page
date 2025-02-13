@@ -23,19 +23,6 @@ body {
     display: block;
 }
 
-.navigation ul {
-   
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-.navigation li {
-    flex: 1;
-    position: relative;
-}
 
 .nav-buttons {
     display: flex;
