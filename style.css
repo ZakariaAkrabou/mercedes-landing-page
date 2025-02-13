@@ -197,3 +197,325 @@ hr {
 /* models section  */
 
 
+body {
+    
+    color: #333F47;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", serif; 
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+
+/* Nav  */
+.sousnav {
+    background-color: #fff;
+    border-radius: 30px;
+    border: 1px solid #E8E8E8;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    box-shadow: none;
+    max-width: 800px;
+    display: block;
+}
+
+
+.nav-buttons {
+    display: flex;
+    position: relative;
+}
+
+.nav-buttons::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 24px;
+    width: 1px;
+    background-color: #E8E8E8;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 18px 20px;
+    font-size: 14px;
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    white-space: nowrap;
+    position: relative;
+    font-family: inherit;
+}
+
+.nav-btn:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 24px;
+    width: 1px;
+    background-color: #E8E8E8;
+    z-index: 1;
+}
+
+.nav-btn:hover {
+    color: #fff;
+    background-color: #333333;
+}
+
+.nav-btn.active {
+    background-color: #333333;
+    color: #fff;
+    font-weight: 500;
+}
+
+.nav-btn:hover:not(:last-child)::after,
+.nav-btn.active:not(:last-child)::after,
+.nav-btn:hover + .nav-btn::after {
+    opacity: 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    padding: 18px 20px;
+    display: block;
+    text-align: center;
+    transition: all 0.5s ease;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
+.navigation a:hover {
+    color: #fff;
+    background-color: #333333;
+}
+
+.navigation li:hover::after,
+.navigation li.active::after,
+.navigation li:hover + li::after {
+    opacity: 0;
+}
+
+.navigation a.active {
+    background-color: #333333;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Models */
+.models-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin: 0 0 25px;
+    font-weight: normal;
+    color: #000;
+    padding-left: 15px;
+}
+
+.models-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    min-height: 500px; 
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-slide {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    transform: translateX(100%);
+}
+
+.slider-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    position: relative;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: #f5f5f5;
+}
+
+.slider-btn.prev {
+    left: 0;
+}
+
+.slider-btn.next {
+    right: 0;
+}
+
+.slider-btn svg {
+    width: 20px;
+    height: 20px;
+    color: #333;
+}
+
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.4px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #E8E8E8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333333;
+    transform: scale(1.2);
+}
+
+.model-card {
+    flex: 0 1 350px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 45px;
+    transition: transform 0.3s ease;
+}
+
+.model-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+}
+
+.model-card h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+    font-weight: 500;
+}
+
+.model-card .price {
+    font-size: 14px;
+    color: #767676;
+    margin: 0 0 5px;
+}
+
+.model-card .learn-more {
+    color: #0094E3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.model-card .learn-more:hover {
+    text-decoration: underline;
+}
+
+.btn-card {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    transform: translateY(20px);
+}
+
+.model-card:hover .btn-card {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-20px);
+}
+
+.btn-card button {
+    padding: 8px 24px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 160px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #C7C7C7;
+    color: #000;
+}
+
+.btn-outline:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+}
+
+.btn-primary {
+    background-color: #0078d6;
+    border: 1px solid #0094E3;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0078b8;
+    border-color: #0078b8;
+}
