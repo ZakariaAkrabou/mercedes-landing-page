@@ -1,52 +1,121 @@
-body {
-    font-family: 'Mercedes-Benz Corpo A', sans-serif;
-    color: #333F47;
-    background-color: #FFFFFF;
-}
-.primary-dark-blue { color: #0B1F2A; }
-.primary-slate-gray { color: #27343C; }
-.primary-charcoal-gray { color: #333F47; }
-.primary-gray { color: #565F64; }
-.primary-light-gray { color: #828A8F; }
-.primary-silver { color: #A4AAAE; }
-.primary-black { color: #000000; }
-.primary-white { color: #FFFFFF; }
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
-
-/* background color */
-.bg-dark-blue { background-color: #0B1F2A; }
-.bg-slate-gray { background-color: #27343C; }
-.bg-charcoal-gray { background-color: #333F47; }
-.bg-gray { background-color: #565F64; }
-.bg-light-gray { background-color: #828A8F; }
-.bg-silver { background-color: #A4AAAE; }
-.bg-black { background-color: #000000; }
-.bg-white { background-color: #FFFFFF; }
-
-
-h1, h2, h3 {
-    font-family: 'Mercedes-Benz Corpo S', sans-serif;
-    font-weight: bold;
-    color: #0B1F2A;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
 }
 
-p {
-    font-family: 'Mercedes-Benz Corpo A', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333F47;
-}
-.btn {
-    font-family: 'Mercedes-Benz Corpo S', sans-serif;
-    background-color: #0B1F2A;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
+
+.logo {
+  display: flex;
+  align-items: center;
+  background-color: rgb(15, 15, 15);
+  padding: 18px;
 }
 
-.btn:hover {
-    background-color: #27343C;
+.logo img {
+  width: 90px;
+  margin-right: 50px;
 }
+
+.logo p {
+  font-size: 14px;
+  font-weight: 200;
+  color: white;
+  padding-top: 30px;
+}
+
+.link-header {
+  text-decoration: none;
+}
+
+hr {
+  border-top: 0.1px solid #b6b6b6;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(15, 15, 15);
+  padding: 5px 16px;
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-menu li {
+  position: relative;
+  margin: 0 0px;
+}
+
+.nav-menu a {
+  display: block;
+  text-decoration: none;
+  color:rgb(180, 177, 177);
+  padding: 10px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  list-style-type: none;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 30px;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.dropdown li {
+  width: 100%;
+}
+
+.dropdown a {
+  color: black;
+  padding: 10px;
+  border-radius: 4px;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: rgba(235, 233, 233, 0.97);
+}
+
+.nav-menu li:hover > .dropdown {
+  display: block;
+}
+
+.sub-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  
+}
+
+.has-sub:hover > .sub-menu {
+  display: block;
+}
+
+.has-sub > a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
