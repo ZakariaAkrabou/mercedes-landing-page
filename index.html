@@ -18,75 +18,75 @@
 <body>
     <header>
         <div class="logo">
-            <a href="#"><img src="imgs/mercedes-benz-icon.png" alt="Mercedes-Benz logo"></a>
+            <a href="#"><img src="images/mercedes-benz-icon.png" alt="Mercedes-Benz logo"></a>
             <a class="link-header" href="#"><p>Mercedes-Benz</p></a>
         </div>
-        <hr>
+        <hr class="thick">
 
         <nav class="navigation">
             <ul class="nav-menu">
                 <li class="has-sub">
-                    <a href="#"> Nos modèles</a>
+                    <a href="#">Nos modèles</a>
                     <ul class="dropdown">
-                        <li class="has-sub">
+                        <li class="has-sub category-compact">
                             <a href="#">Compacte <span class="arrow">▶</span></a>
-                            <ul class="dropdown sub-menu">
+                            <ul class="sub-menu">
                                 <li><a href="#">Classe A</a></li>
                                 <li><a href="#">Classe B</a></li>
                                 <li><a href="#">CLA</a></li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a href="#"> Berlines <span class="arrow">▶</span></a>
-                            <ul class="dropdown sub-menu">
+                        <li class="has-sub category-berline">
+                            <a href="#">Berlines <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
                                 <li><a href="#">Classe C</a></li>
                                 <li><a href="#">Classe E</a></li>
                                 <li><a href="#">Classe S</a></li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a href="#"> SUV/Tout-terrains <span class="arrow">▶</span></a>
-                            <ul class="dropdown sub-menu">
+                        <li class="has-sub category-suv">
+                            <a href="#">SUV/Tout-terrains <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
                                 <li><a href="#">GLA</a></li>
                                 <li><a href="#">GLC</a></li>
                                 <li><a href="#">GLE</a></li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a href="#"> Coupés <span class="arrow">▶</span></a>
-                            <ul class="dropdown sub-menu">
+                        <li class="has-sub category-coupe">
+                            <a href="#">Coupés <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
                                 <li><a href="#">Coupé CLA</a></li>
                                 <li><a href="#">Coupé GLC</a></li>
                                 <li><a href="#">AMG GT</a></li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a href="#"> Cabriolets/Roadsters <span class="arrow">▶</span></a>
-                            <ul class="dropdown sub-menu">
+                        <li class="has-sub category-cabriolet">
+                            <a href="#">Cabriolets/Roadsters <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
                                 <li><a href="#">Classe C Cabriolet</a></li>
                                 <li><a href="#">Classe E Cabriolet</a></li>
                                 <li><a href="#">SL</a></li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a href="#"> Monospaces <span class="arrow">▶</span></a>
-                            <ul class="dropdown sub-menu">
+                        <li class="has-sub category-monospace">
+                            <a href="#">Monospaces <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
                                 <li><a href="#">Classe V</a></li>
                                 <li><a href="#">EQV</a></li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a href="#"> Véhicules électriques <span class="arrow">▶</span></a>
-                            <ul class="dropdown sub-menu">
+                        <li class="has-sub category-electrique">
+                            <a href="#">Véhicules électriques <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
                                 <li><a href="#">EQA</a></li>
                                 <li><a href="#">EQB</a></li>
                                 <li><a href="#">EQC</a></li>
                                 <li><a href="#">EQS</a></li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a href="#"> Véhicules utilitaires légers <span class="arrow">▶</span></a>
-                            <ul class="dropdown sub-menu">
+                        <li class="has-sub category-utilitaire">
+                            <a href="#">Véhicules utilitaires légers <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
                                 <li><a href="#">Sprinter</a></li>
                                 <li><a href="#">Vito</a></li>
                                 <li><a href="#">Citan</a></li>
@@ -144,8 +144,10 @@
 
     <!-- models section -->
     <section class="models-section">
-
-        <h2 class="section-title">Nos modèles</h2>
+        <div class="section-title">
+            <h2>Nos modèles</h2>
+        </div>
+       
         <nav class="sousnav">
             <div class="nav-buttons">
                 <button class="nav-btn active" data-category="berlines">Berlines</button>
@@ -165,20 +167,24 @@
 
             <div class="slider-wrapper">
                 <div class="slider-track">
-                    <!-- Berlines -->
+                   
                     <div class="slider-slide active" data-category="berlines">
                         <div class="model-card">
-                            <img src="images/car.jpg" alt="CLA Coupé">
+                            <div class="image-container">
+                                <img src="images/car.jpg" alt="CLA Coupé">
+                            </div>
                             <h3>CLA Coupé</h3>
                             <p class="price">À partir de 464.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
                             <div class="btn-card">
                                 <button class="btn-outline">Télécharger la brochure</button>
-                                <button class="btn-primary">Acheter en ligne</button>
+                                <button class="btn-primary">Acheter en ligne </button>
                             </div>
                         </div>
                         <div class="model-card">
-                            <img src="images/car.jpg" alt="CLE Coupé">
+                            <div class="image-container">
+                                <img src="images/car.jpg" alt="CLE Coupé">
+                            </div>
                             <h3>CLE Coupé</h3>
                             <p class="price">À partir de 625.000 Dh</p>
                             <div class="btn-card">
@@ -187,7 +193,9 @@
                             </div>
                         </div>
                         <div class="model-card">
-                            <img src="images/car.jpg" alt="Mercedes-AMG GT Coupé">
+                            <div class="image-container">
+                                <img src="images/car.jpg" alt="Mercedes-AMG GT Coupé">
+                            </div>
                             <h3>Mercedes-AMG GT Coupé</h3>
                             <p class="price">Prix disponible à la demande</p>
                             <div class="btn-card">
@@ -197,10 +205,12 @@
                         </div>
                     </div>
 
-                    <!-- SUV -->
+                  
                     <div class="slider-slide" data-category="suv">
                         <div class="model-card">
-                            <img src="images/car2.png" alt="GLA SUV">
+                            <div class="image-container">
+                                <img src="images/car2.png" alt="GLA SUV">
+                            </div>
                             <h3>GLA SUV</h3>
                             <p class="price">À partir de 518.000 Dh</p>
                             <div class="btn-card">
@@ -209,7 +219,9 @@
                             </div>
                         </div>
                         <div class="model-card">
-                            <img src="images/car2.png" alt="GLB SUV">
+                            <div class="image-container">
+                                <img src="images/car2.png" alt="GLB SUV">
+                            </div>
                             <h3>GLB SUV</h3>
                             <p class="price">À partir de 548.000 Dh</p>
                             <div class="btn-card">
@@ -218,7 +230,9 @@
                             </div>
                         </div>
                         <div class="model-card">
-                            <img src="images/car2.png" alt="GLC SUV">
+                            <div class="image-container">
+                                <img src="images/car2.png" alt="GLC SUV">
+                            </div>
                             <h3>GLC SUV</h3>
                             <p class="price">À partir de 678.000 Dh</p>
                             <div class="btn-card">
@@ -228,10 +242,12 @@
                         </div>
                     </div>
 
-                    <!-- Coupés -->
+                    
                     <div class="slider-slide" data-category="coupes">
                         <div class="model-card">
-                            <img src="images/car.jpg" alt="Mercedes EQE">
+                            <div class="image-container">
+                                <img src="images/car.jpg" alt="Mercedes EQE">
+                            </div>
                             <h3>EQE</h3>
                             <p class="price">À partir de 918.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -241,7 +257,9 @@
                             </div>
                         </div>
                         <div class="model-card">
-                            <img src="images/car.jpg" alt="Mercedes EQS">
+                            <div class="image-container">
+                                <img src="images/car.jpg" alt="Mercedes EQS">
+                            </div>
                             <h3>EQS</h3>
                             <p class="price">Prix disponible à la demande</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -251,7 +269,9 @@
                             </div>
                         </div>
                         <div class="model-card">
-                            <img src="images/car.jpg" alt="Mercedes Classe A Berline">
+                            <div class="image-container">
+                                <img src="images/car.jpg" alt="Mercedes Classe A Berline">
+                            </div>
                             <h3>Classe A Berline</h3>
                             <p class="price">À partir de 454.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -262,10 +282,12 @@
                         </div>
                     </div>
 
-                    <!-- Cabriolets/Roadsters -->
+                   
                     <div class="slider-slide" data-category="cabriolets">
                         <div class="model-card">
-                            <img src="images/car2.png" alt="Mercedes EQE">
+                            <div class="image-container">
+                                <img src="images/car2.png" alt="Mercedes EQE">
+                            </div>
                             <h3>EQE</h3>
                             <p class="price">À partir de 918.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -276,7 +298,9 @@
                         </div>
 
                         <div class="model-card">
-                            <img src="images/car2.png" alt="Mercedes EQE">
+                            <div class="image-container">
+                                <img src="images/car2.png" alt="Mercedes EQE">
+                            </div>
                             <h3>EQE</h3>
                             <p class="price">À partir de 918.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -288,7 +312,9 @@
 
 
                         <div class="model-card">
-                            <img src="images/car2.png" alt="Mercedes EQE">
+                            <div class="image-container">
+                                <img src="images/car2.png" alt="Mercedes EQE">
+                            </div>
                             <h3>EQE</h3>
                             <p class="price">À partir de 918.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -299,10 +325,12 @@
                         </div>
                     </div>
 
-                    <!-- Compactes -->
+                   
                     <div class="slider-slide" data-category="compactes">
                         <div class="model-card">
-                            <img src="images/car.jpg" alt="Mercedes EQE">
+                            <div class="image-container">
+                                <img src="images/car.jpg" alt="Mercedes EQE">
+                            </div>
                             <h3>EQE</h3>
                             <p class="price">À partir de 918.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -312,7 +340,9 @@
                             </div>
                         </div>
                         <div class="model-card">
-                            <img src="images/car.jpg" alt="Mercedes EQS">
+                            <div class="image-container">
+                                <img src="images/car.jpg" alt="Mercedes EQS">
+                            </div>
                             <h3>EQS</h3>
                             <p class="price">Prix disponible à la demande</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -322,7 +352,9 @@
                             </div>
                         </div>
                         <div class="model-card">
-                            <img src="images/car.jpg" alt="Mercedes Classe A Berline">
+                            <div class="image-container">
+                                <img src="images/car.jpg" alt="Mercedes Classe A Berline">
+                            </div>
                             <h3>Classe A Berline</h3>
                             <p class="price">À partir de 454.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -333,10 +365,12 @@
                         </div>
                     </div>
 
-                    <!-- Monospaces -->
+                    
                     <div class="slider-slide" data-category="monospaces">
                         <div class="model-card">
-                            <img src="images/car2.png" alt="Mercedes EQE">
+                            <div class="image-container">
+                                <img src="images/car2.png" alt="Mercedes EQE">
+                            </div>
                             <h3>EQE</h3>
                             <p class="price">À partir de 918.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -347,7 +381,9 @@
                         </div>
 
                         <div class="model-card">
-                            <img src="images/car2.png" alt="Mercedes EQE">
+                            <div class="image-container">
+                                <img src="images/car2.png" alt="Mercedes EQE">
+                            </div>
                             <h3>EQE</h3>
                             <p class="price">À partir de 918.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
@@ -359,7 +395,9 @@
 
 
                         <div class="model-card">
-                            <img src="images/car2.png" alt="Mercedes EQE">
+                            <div class="image-container">
+                                <img src="images/car2.png" alt="Mercedes EQE">
+                            </div>
                             <h3>EQE</h3>
                             <p class="price">À partir de 918.000 Dh</p>
                             <a href="#" class="learn-more">En savoir plus</a>
