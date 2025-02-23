@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+}
+
+/* navbar */
+.logo {
+  display: flex;
+  align-items: center;
+  background-color: rgb(15, 15, 15);
+  padding: 18px;
+}
+
+.logo img {
+  width: 90px;
+  margin-right: 50px;
+}
+
+.logo p {
+  font-size: 14px;
+  font-weight: 200;
+  color: white;
+  padding-top: 30px;
+}
+
+.link-header {
+  text-decoration: none;
+}
+
+hr.thick {
+  border: 0.1px solid #262626;
+}
+
+.navigation {
+  background-color: #000000;
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 52px;
+}
+
+.nav-menu > li > a {
+  position: relative;
+  padding: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.nav-menu > li > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00b0ff;
+  transition: width 0.7s ease-in-out;
+}
+
+.nav-menu > li:hover > a::before {
+  width: 100%;
+}
+
+.nav-menu a {
+  display: block;
+  text-decoration: none;
+  color: rgb(180, 177, 177);
+  padding: 10px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  list-style-type: none;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 30px;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.dropdown li {
+  width: 100%;
+}
+
+.dropdown a {
+  color: black;
+  padding: 10px;
+  border-radius: 4px;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #f4f4f4;
+}
+
+.nav-menu li:hover > .dropdown {
+  display: block;
+}
+
+.sub-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.has-sub:hover > .sub-menu {
+  display: block;
+}
+
+.has-sub > a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu .has-sub {
+  position: relative;
+}
+
+.nav-menu .has-sub > a {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-menu,
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu .has-sub .dropdown li {
+  position: relative;
+}
+
+.nav-menu .has-sub .dropdown li a {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  color: #666;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  gap: 12px;
+  text-decoration: none;
+  background: transparent;
+}
+
+.nav-menu .has-sub .dropdown li a:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("images/car.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.nav-menu .has-sub .dropdown li:hover > a {
+  color: #000;
+  background-color: #f4f4f4;
+}
+
+.nav-menu .has-sub .dropdown li:hover > a:before {
+  opacity: 1;
+}
+
+.nav-menu .has-sub .dropdown .arrow {
+  margin-left: auto;
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.nav-menu .has-sub .sub-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  min-width: 220px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.nav-menu .has-sub .dropdown li:hover > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-menu > li:not(:first-child) .dropdown li a:before {
+  display: none;
+}
+
+.nav-menu > li:first-child .dropdown li a:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("images/car.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.nav-menu > li:first-child .dropdown li:hover > a:before {
+  opacity: 1;
+}
+
+.nav-menu .has-sub .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-top: 1px solid #eee;
+}
+
+.nav-menu .has-sub .dropdown li a {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  color: #666;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  gap: 12px;
+  text-decoration: none;
+  background: transparent;
+  font-weight: 400;
+}
+
+.nav-menu .has-sub .dropdown li:hover > a {
+  color: #000;
+  background-color: #f4f4f4;
+}
+
+.nav-menu .has-sub .sub-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  min-width: 220px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  border-left: 1px solid #eee;
+}
+
+.nav-menu .has-sub:hover > .dropdown,
+.nav-menu .has-sub .dropdown li:hover > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-menu .has-sub .dropdown .arrow {
+  margin-left: auto;
+  font-size: 10px;
+  opacity: 0.5;
+  color: #666;
+}
+
+.nav-menu .has-sub .dropdown li:hover > .arrow {
+  opacity: 1;
+  color: #000;
+}
+
+.category-compact a:before {
+  background-image: url("images/car.png");
+}
+.category-berline a:before {
+  background-image: url("images/car.png");
+}
+.category-suv a:before {
+  background-image: url("images/car.png");
+}
+.category-coupe a:before {
+  background-image: url("images/car.png");
+}
+.category-cabriolet a:before {
+  background-image: url("images/car.png");
+}
+.category-monospace a:before {
+  background-image: url("images/car.png");
+}
+.category-electrique a:before {
+  background-image: url("images/car.png");
+}
+.category-utilitaire a:before {
+  background-image: url("images/car.png");
+}
+
+
+
+
+/* Services Page Styles */
+.services-main {
+    min-height: 100vh;
+    background: url('images/cle-coupe.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.services-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.858);
+}
+
+.service-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    text-align: center;
+    color: #090909;
+}
+
+.mercedes-logo {
+    margin-bottom: 2rem;
+}
+
+.mercedes-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.service-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #090909;
+}
+
+.service-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #060606;
+}
+
+.service-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
