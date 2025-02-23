@@ -63,13 +63,13 @@ hr.thick {
 }
 
 .nav-menu > li > a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #00B0FF;
+  background-color: #00b0ff;
   transition: width 0.7s ease-in-out;
 }
 
@@ -154,160 +154,176 @@ hr.thick {
   gap: 10px;
 }
 
-.nav-menu, 
+.nav-menu,
 .nav-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-menu .has-sub .dropdown li {
-    position: relative;
+  position: relative;
 }
 
 .nav-menu .has-sub .dropdown li a {
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    color: #666;
-    transition: all 0.2s ease;
-    font-size: 14px;
-    gap: 12px;
-    text-decoration: none;
-    background: transparent;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  color: #666;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  gap: 12px;
+  text-decoration: none;
+  background: transparent;
 }
 
 .nav-menu .has-sub .dropdown li a:before {
-    content: '';
-    width: 16px;
-    height: 16px;
-    background: url('images/car.png') no-repeat center;
-    background-size: contain;
-    opacity: 0.6;
-    flex-shrink: 0;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("images/car.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
+  flex-shrink: 0;
 }
 
 .nav-menu .has-sub .dropdown li:hover > a {
-    color: #000;
-    background-color: #f4f4f4;
+  color: #000;
+  background-color: #f4f4f4;
 }
 
 .nav-menu .has-sub .dropdown li:hover > a:before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .nav-menu .has-sub .dropdown .arrow {
-    margin-left: auto;
-    font-size: 10px;
-    opacity: 0.5;
+  margin-left: auto;
+  font-size: 10px;
+  opacity: 0.5;
 }
 
 .nav-menu .has-sub .sub-menu {
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background: white;
-    min-width: 220px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  min-width: 220px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
 .nav-menu .has-sub .dropdown li:hover > .sub-menu {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav-menu > li:not(:first-child) .dropdown li a:before {
-    display: none;
+  display: none;
 }
 
 .nav-menu > li:first-child .dropdown li a:before {
-    content: '';
-    width: 16px;
-    height: 16px;
-    background: url('images/car.png') no-repeat center;
-    background-size: contain;
-    opacity: 0.6;
-    flex-shrink: 0;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("images/car.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
+  flex-shrink: 0;
 }
 
 .nav-menu > li:first-child .dropdown li:hover > a:before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .nav-menu .has-sub .dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 250px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    border-top: 1px solid #eee;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-top: 1px solid #eee;
 }
 
 .nav-menu .has-sub .dropdown li a {
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    color: #666;
-    transition: all 0.2s ease;
-    font-size: 14px;
-    gap: 12px;
-    text-decoration: none;
-    background: transparent;
-    font-weight: 400;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  color: #666;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  gap: 12px;
+  text-decoration: none;
+  background: transparent;
+  font-weight: 400;
 }
 
 .nav-menu .has-sub .dropdown li:hover > a {
-    color: #000;
-    background-color: #f4f4f4;
+  color: #000;
+  background-color: #f4f4f4;
 }
 
 .nav-menu .has-sub .sub-menu {
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background: white;
-    min-width: 220px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    border-left: 1px solid #eee;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  min-width: 220px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  border-left: 1px solid #eee;
 }
 
 .nav-menu .has-sub:hover > .dropdown,
 .nav-menu .has-sub .dropdown li:hover > .sub-menu {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav-menu .has-sub .dropdown .arrow {
-    margin-left: auto;
-    font-size: 10px;
-    opacity: 0.5;
-    color: #666;
+  margin-left: auto;
+  font-size: 10px;
+  opacity: 0.5;
+  color: #666;
 }
 
 .nav-menu .has-sub .dropdown li:hover > .arrow {
-    opacity: 1;
-    color: #000;
+  opacity: 1;
+  color: #000;
 }
 
-.category-compact a:before { background-image: url('images/car.png'); }
-.category-berline a:before { background-image: url('images/car.png'); }
-.category-suv a:before { background-image: url('images/car.png'); }
-.category-coupe a:before { background-image: url('images/car.png'); }
-.category-cabriolet a:before { background-image: url('images/car.png'); }
-.category-monospace a:before { background-image: url('images/car.png'); }
-.category-electrique a:before { background-image: url('images/car.png'); }
-.category-utilitaire a:before { background-image: url('images/car.png'); }
+.category-compact a:before {
+  background-image: url("images/car.png");
+}
+.category-berline a:before {
+  background-image: url("images/car.png");
+}
+.category-suv a:before {
+  background-image: url("images/car.png");
+}
+.category-coupe a:before {
+  background-image: url("images/car.png");
+}
+.category-cabriolet a:before {
+  background-image: url("images/car.png");
+}
+.category-monospace a:before {
+  background-image: url("images/car.png");
+}
+.category-electrique a:before {
+  background-image: url("images/car.png");
+}
+.category-utilitaire a:before {
+  background-image: url("images/car.png");
+}
 
 /* Hero Section */
 .hero {
@@ -481,7 +497,7 @@ hr.thick {
 
 /* models section  */
 
-body {
+/* body {
   color: #333f47;
   background-color: #ffffff;
   margin: 0;
@@ -489,9 +505,35 @@ body {
   font-family: "Merriweather", serif;
   font-optical-sizing: auto;
   font-style: normal;
-}
+} */
 
 /* Nav  */
+.models-section {
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.section-title {
+  margin-bottom: 30px;
+  padding: 0 40px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+  font-family: "Corporate A", "Merriweather", serif;
+}
+
+.models-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  min-height: 500px;
+}
+
 .sousnav {
   background-color: #fff;
   border-radius: 30px;
@@ -590,33 +632,6 @@ body {
   background-color: #333333;
   color: #fff;
   font-weight: 500;
-}
-
-/* Models */
-.models-section {
-  padding: 40px 0;
-  background-color: #fff;
-}
-
-.section-title {
-  margin-bottom: 30px;
-  padding: 0 40px;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  font-weight: 400;
-  color: #000;
-  margin: 0;
-  font-family: "Corporate A", "Merriweather", serif;
-}
-
-.models-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 50px;
-  min-height: 500px;
 }
 
 .slider-wrapper {
@@ -822,4 +837,235 @@ body {
   border-color: #014880;
   transition: all 0.6s ease, background-color 0.6s ease-in-out,
     color 0.3s ease-in-out;
+}
+
+/* projectors section */
+
+.projectors-section {
+  padding: 64px 0;
+  background-color: #f9f9f9;
+}
+
+.projectors-title {
+  margin-bottom: 30px;
+  padding: 0 40px;
+}
+
+.projectors-title h2 {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.2;
+  color: #333333;
+  font-family: "Corporate A", "Merriweather", serif;
+}
+
+.projectors-title span {
+  font-size: 15px;
+  color: #767676;
+}
+
+.projectors-slider {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.projectors-container {
+  overflow: hidden;
+  margin: 0 48px;
+}
+
+.projectors-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s ease;
+}
+
+.projectors-card {
+  position: relative;
+  flex: 0 0 calc(25% - 18px);
+  aspect-ratio: 4/6;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projectors-card .image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.projectors-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.projectors-card:hover img {
+  transform: scale(1.05);
+}
+
+.projectors-card .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 64px 32px 32px;
+  color: #fff;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.projectors-card .description h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.projectors-card .description p {
+  font-size: 16px;
+  margin: 0 0 24px 0;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+.projectors-card .sell-online {
+  background-color: #0380df;
+  color: #fff;
+  border: none;
+  padding: 13px 36px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+  border-radius: 15px;
+}
+
+.projectors-card:hover .sell-online {
+  transform: translateY(-15px);
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.slider-nav:hover {
+  background-color: #fff;
+}
+
+.slider-nav.prev {
+  left: 12px;
+}
+
+.slider-nav.next {
+  right: 12px;
+}
+
+.slider-nav svg {
+  width: 24px;
+  height: 24px;
+  color: #000;
+}
+
+.projectors-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.projectors-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #666;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.projectors-dots .dot.active {
+  background-color: #fff;
+}
+
+
+.cle-coupe-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.cle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.cle-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px;
+  color: white;
+  background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cle-content h2 {
+  font-size: 48px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.cle-content p {
+  font-size: 20px;
+  margin: 10px 0 20px 0;
+  opacity: 0.9;
+}
+
+.cle-content .action-btn {
+  background-color: #0380df;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: fit-content;
+}
+
+.cle-content .action-btn:hover {
+  background-color: #0052a3;
 }
