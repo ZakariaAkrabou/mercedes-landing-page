@@ -128,26 +128,107 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     updateProjectorSlider();
-});
 
+    const projectorDots = document.querySelectorAll('.projectors-dots .dot');
 
-const projectorDots = document.querySelectorAll('.projectors-dots .dot');
-
-function updateProjectorSlider() {
-    const offset = currentProjectorIndex * -100;
-    projectorTrack.style.transform = `translateX(${offset}%)`;
-    
+    function updateProjectorSlider() {
+        const offset = currentProjectorIndex * -100;
+        projectorTrack.style.transform = `translateX(${offset}%)`;
+        
    
-    projectorDots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentProjectorIndex);
-    });
+        projectorDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentProjectorIndex);
+        });
 
-    projectorDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentProjectorIndex = index;
-            updateProjectorSlider();
+        projectorDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentProjectorIndex = index;
+                updateProjectorSlider();
+            });
+        });
+    }
+
+    // Form steps handling
+    const steps = document.querySelectorAll('.step');
+    const forms = document.querySelectorAll('.form-step');
+    const nextButtons = document.querySelectorAll('.next-step');
+    const prevButtons = document.querySelectorAll('.prev-step');
+    let currentStep = 1;
+
+    // Open modal
+    const modalBtn = document.getElementById('open-modal-btn');
+    const modal = document.getElementById('rdv-modal');
+
+    if (modalBtn && modal) {
+        modalBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                resetForm();
+            }
+        });
+    }
+
+    function updateSteps() {
+        steps.forEach((step) => {
+            const stepNum = parseInt(step.dataset.step);
+            if (stepNum === currentStep) {
+                step.classList.add('active');
+            } else if (stepNum < currentStep) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
+
+        forms.forEach((form, index) => {
+            if (index + 1 === currentStep) {
+                form.classList.add('active');
+            } else {
+                form.classList.remove('active');
+            }
+        });
+    }
+
+    function resetForm() {
+        currentStep = 1;
+        updateSteps();
+        forms.forEach(form => {
+            if (form instanceof HTMLFormElement) {
+                form.reset();
+            }
+        });
+    }
+
+    nextButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const form = button.closest('.form-step');
+            
+            // Check form validity before proceeding
+            if (form && form.checkValidity()) {
+                if (currentStep < steps.length) {
+                    currentStep++;
+                    updateSteps();
+                }
+            } else {
+                // Trigger HTML5 validation
+                form.reportValidity();
+            }
         });
     });
-}
 
-
+    prevButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (currentStep > 1) {
+                currentStep--;
+                updateSteps();
+            }
+        });
+    });
+});

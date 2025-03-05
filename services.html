@@ -137,12 +137,139 @@
                 <h2>SAV</h2>
                 <p class="service-description">t is a long established fact that a reader will be distracted by the
                     readable content of a page when looking at its layout</p>
-                <button class="submit-btn">Suivant <i class="fa-solid fa-circle-arrow-right"></i></button>
+                <button class="submit-btn" id="open-modal-btn">Suivant <i
+                        class="fa-solid fa-circle-arrow-right"></i></button>
             </div>
         </div>
     </main>
 
+    <section class="modal-section">
+        <!-- Modal Popup -->
+        <div id="rdv-modal" class="modal-container">
+            <div class="modal-content">
+                <img src="images/popup.jpg" alt="Mercedes-Benz" class="modal-image">
+                <div class="modal-form">
+                    <h2 class="modal-title">Demander un<br><span class="rdv-text">RDV SAV</span></h2>
 
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">1</div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="2">2</div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="3">3</div>
+                    </div>
+
+                    <!-- Step 1 Form -->
+                    <form id="rdv-form-step1" class="form-step active">
+                        <div class="form-group">
+                            <label for="prenom">Prénom <span class="required">*</span></label>
+                            <input type="text" id="prenom" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom">Nom <span class="required">*</span></label>
+                            <input type="text" id="nom" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail <span class="required">*</span></label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">Téléphone <span class="required">*</span></label>
+                            <input type="tel" id="telephone" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="civilite">Civilité <span class="required">*</span></label>
+                            <select id="civilite" class="form-select" required>
+                                <option value="" selected disabled>Veuillez sélectionner...</option>
+                                <option value="monsieur">Monsieur</option>
+                                <option value="madame">Madame</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Suivant <i
+                                class="fa-solid fa-circle-arrow-right"></i></button>
+                    </form>
+
+                    <!-- Step 2 Form -->
+                    <!-- <form id="rdv-form-step2" class="form-step">
+                        <div class="form-group">
+                            <label for="immatriculation">Immatriculation du véhicule <span class="required">*</span></label>
+                            <input type="text" id="immatriculation" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="modele">Modèle du véhicule <span class="required">*</span></label>
+                            <input type="text" id="modele" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kilometrage">Kilométrage du véhicule <span class="required">*</span></label>
+                            <input type="number" id="kilometrage" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="point-vente">Choisissez votre point de vente <span class="required">*</span></label>
+                            <select id="point-vente" class="form-select" required>
+                                <option value="" selected disabled>Veuillez sélectionner...</option>
+                                <option value="paris">Paris</option>
+                                <option value="lyon">Lyon</option>
+                                <option value="marseille">Marseille</option>
+                            </select>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="submit-btn retour-btn" id="retour-step1">
+                                <i class="fa-solid fa-circle-arrow-left"></i> Retour
+                            </button>
+                            <button type="submit" class="submit-btn">
+                                Terminer <i class="fa-solid fa-circle-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script>
+
+        const openBtn = document.getElementById('open-modal-btn');
+        const modal = document.getElementById('rdv-modal');
+
+
+        openBtn.addEventListener('click', function () {
+            modal.style.display = 'flex';
+        });
+
+
+        window.addEventListener('click', function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+
+        // const form = document.getElementById('rdv-form-step1');
+        // form.addEventListener('submit', function (event) {
+        //     event.preventDefault();
+
+        //     console.log('Form submitted, move to next step');
+
+        // });
+        // const nextFrom = document.getElementById('rdv-form-step2');
+        // nextFrom.addEventListener('submit', function (event) {
+        //     event.preventDefault();
+
+        //     console.log('Form submitted, move to next step');
+
+        // });
+    </script>
 </body>
 
 </html>
