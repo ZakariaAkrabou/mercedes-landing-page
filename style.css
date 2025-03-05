@@ -62,6 +62,7 @@ hr.thick {
   letter-spacing: 0.2px;
 }
 
+/* soulignement au survol */
 .nav-menu > li > a::before {
   content: "";
   position: absolute;
@@ -117,6 +118,7 @@ hr.thick {
   display: block;
 }
 
+/* Sous-menus */
 .sub-menu {
   position: absolute;
   left: 100%;
@@ -136,7 +138,7 @@ hr.thick {
   justify-content: space-between;
   width: 100%;
 }
-
+/* Icône  Flèché */
 .arrow {
   margin-left: 8px;
   font-size: 12px;
@@ -839,6 +841,7 @@ hr.thick {
     color 0.3s ease-in-out;
 }
 
+<<<<<<< HEAD
 /* projectors section */
 
 .projectors-section {
@@ -847,10 +850,16 @@ hr.thick {
 }
 
 .projectors-title {
+=======
+
+/* section card  */
+.car-title {
+>>>>>>> 04c79dd (footer)
   margin-bottom: 30px;
   padding: 0 40px;
 }
 
+<<<<<<< HEAD
 .projectors-title h2 {
   font-weight: 400;
   font-size: 38px;
@@ -1068,4 +1077,204 @@ hr.thick {
 
 .cle-content .action-btn:hover {
   background-color: #0052a3;
+=======
+.car-title h1 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+  padding-top: 40px;
+  font-family: "Corporate A", "Merriweather", serif;
+}
+.car-title p {
+  padding-top: 40px;
+  color: #666;
+}
+
+.container-cars {
+    display: flex;
+    justify-content: center;
+
+}
+.card-cars {
+  width: 270px;
+  height: 400px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.card-cars:hover {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2); 
+  transition: box-shadow 0.3s ease-in-out; 
+}
+
+.card-image {
+  width: 100%;
+  height: 150px; 
+  position : relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 15px 15px 0 0;
+
+}
+
+.featured-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #0078d6;
+  color: white;
+  font-size: 10px;
+  padding: 5px 10px;
+  border-radius : 10px;
+}
+
+.sub-title{
+  color: black;
+  margin: 18px 18px;
+}
+.sub-title h1 {
+  font-size: 18px;
+  font-weight: 300;
+}
+.sub-title p {
+  font-size: 13px;
+  padding-top: 10px;
+  color:rgb(40, 40, 40);
+}
+
+.sub-title:hover h1,
+.sub-title:hover p {
+  color: #0078d6; 
+}
+
+
+.car-features {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  font-size: 14px;
+}
+.feature-item img{
+  width: 17px;
+}
+.price-cars {
+  font-size: 20px;
+  padding: 0px 30px;
+  margin: 10px 0px ;
+  color: #0078d6;
+  font-weight: bold;
+}
+
+
+.car-link a {
+  display: block; 
+  text-decoration: none;
+  color: #0078d6;
+  font-weight: bold;
+  background-color: transparent;
+  padding: 20px 0; 
+  text-align: center;
+  border-radius:  0 0 15px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.car-link a:hover {
+  background-color: #0078d6; 
+  color: white; 
+}
+
+
+/* footer */
+.footer {
+  background: #000; 
+  color: #fff; 
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 100px; 
+  margin-top: 70px;
+
+}
+
+.footer-right li {
+  display: flex;
+  flex-direction: column; 
+}
+
+.footer h2 {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 13px;
+}
+
+.footer ul li a {
+  color:rgb(195, 195, 195); 
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 13px;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+  color: white;
+}
+.thinkk {
+  border: 0.1px solid rgb(109, 108, 108);
+  margin-top: 50px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.footer-links {
+  margin-top: 20px;
+  margin-bottom : 30px;
+
+}
+
+.footer-links a {
+  color: rgb(216, 214, 214);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+.social-icons a {
+  color: white;
+  font-size: 15px;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+.youtube-icon:hover {
+  color: red;
+>>>>>>> 04c79dd (footer)
 }
