@@ -1159,6 +1159,11 @@ hr.thick {
 .feature-item img {
   width: 17px;
 }
+.feature-item{
+  display: flex;
+  gap: 10px;
+  
+}
 .price-cars {
   font-size: 20px;
   padding: 0px 30px;
