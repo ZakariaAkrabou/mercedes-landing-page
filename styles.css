@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.37;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #0078D6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 120, 214, 0.3);
+}
+
+.btn:hover {
+    background-color: white;
+    color: #0078D6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 120, 214, 0.4);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: white;
+    display: flex;
+    width: 85%;
+    max-width: 850px;
+    height: 550px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal-content img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.form-container {
+    width: 60%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.progress-step {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+    border-radius: 50%;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.progress-step.active {
+    background: #0078D6;
+    color: white;
+    transform: scale(1.1);
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: #ddd;
+    opacity: 0.3;
+    margin: 0 10px;
+    position: relative;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.progress-bar.active {
+    background: #0078D6;
+    opacity: 1;
+}
+
+.form-step {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.form-step.active {
+    display: flex;
+    animation: slideIn 0.4s;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.form-step h2 {
+    margin-bottom: 25px;
+    color: #0078D6;
+    font-size: 24px;
+}
+
+.form-fields {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.form-step label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-step label span {
+    width: 180px; 
+    text-align: left;
+    font-size: 14px;
+}
+
+.form-step input,
+.form-step select {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.form-step input:focus,
+.form-step select:focus {
+    border-color: #0078D6;
+    box-shadow: 0 0 0 3px rgba(0, 120, 214, 0.2);
+    outline: none;
+}
+
+.form-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    position: relative;
+    background: transparent;
+}
+
+.form-buttons button {
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.3s;
+    margin-left: 15px;
+}
+
+.prev-btn {
+    background: #f0f0f0;
+    color: #555;
+}
+
+.prev-btn:hover {
+    background: #e0e0e0;
+}
+
+.next-btn, .submit-btn {
+    background: #0078D6;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 120, 214, 0.3);
+}
+
+.next-btn:hover, .submit-btn:hover {
+    background: #0060b0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 120, 214, 0.4);
+}
+
+.submit-btn {
+    background: #28a745;
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.submit-btn:hover {
+    background: #218838;
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4);
+}
+
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.confirmation-container img {
+    width: 120px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.confirmation-container h2 {
+    margin-bottom: 20px;
+    color: #0078D6;
+    font-size: 28px;
+}
+
+.confirmation-container p {
+    margin-bottom: 30px;
+    max-width: 80%;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+        height: auto;
+        max-height: 90vh;
+    }
+    
+    .modal-content img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .form-step label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .form-step label span {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .form-step input,
+    .form-step select {
+        width: 100%;
+    }
+    
+    .form-buttons {
+        position: static;
+        padding: 15px 0 0;
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Rendez-vous SAV Mercedes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="images/Mercedes-Benz-AMG_GT_Coupe-2024-1600-08-600-x-339.jpg" alt="Mercedes AMG GT">
+    </div>
+
+    <div class="content">
+        <img src="images/mercedes-icon.png" alt="Logo Mercedes" class="logo">
+        <h1>Demander un RDV <br> SAV</h1>
+        <p>Prenez rendez-vous pour l'entretien de votre véhicule Mercedes-Benz auprès de nos experts certifiés.</p>
+        <button class="btn" onclick="openModal()">Prendre rendez-vous</button>
+    </div>
+
+    <div class="modal" id="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img src="images/imag.jpeg" alt="Formulaire Image">
+            <div class="form-container">
+                
+                <div class="progress-container">
+                    <span class="progress-step active">1</span>
+                    <div class="progress-bar" id="bar1"></div>
+                    <span class="progress-step">2</span>
+                    <div class="progress-bar" id="bar2"></div>
+                    <span class="progress-step">3</span>
+                </div>
+
+                <form id="multiStepForm">
+                    <!-- Étape 1 -->
+                    <div class="form-step active">
+                        <h2>Informations sur le véhicule</h2>
+                        <div class="form-fields">
+                            <label>
+                                <span>Immatriculation :</span>
+                                <input type="text" placeholder="AA-123-AA" required>
+                            </label>
+
+                            <label>
+                                <span>Modèle du véhicule :</span>
+                                <input type="text" placeholder="Classe A" required>
+                            </label>
+
+                            <label>
+                                <span>Kilométrage :</span>
+                                <input type="number" placeholder="50000" required>
+                            </label>
+
+                            <label>
+                                <span>Point de vente :</span>
+                                <select required>
+                                    <option value="">Sélectionnez un point de vente</option>
+                                    <option value="rabat">Rabat - Avenue Mohammed VI</option>
+                                    <option value="casa">Casablanca - Boulevard Anfa</option>
+                                    <option value="marrakech">Marrakech - Avenue Guemassa</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="next-btn" onclick="nextStep()">Suivant</button>
+                        </div>
+                    </div>
+
+                    <!-- Étape 2 -->
+                    <div class="form-step">
+                        <h2>Informations personnelles</h2>
+                        <div class="form-fields">
+                            <label>
+                                <span>Civilité :</span>
+                                <select required>
+                                    <option value="">Sélectionnez</option>
+                                    <option value="mr">Monsieur</option>
+                                    <option value="mme">Madame</option>
+                                </select>
+                            </label>
+
+                            <label>
+                                <span>Prénom :</span>
+                                <input type="text" placeholder="Maroua" required>
+                            </label>
+
+                            <label>
+                                <span>Nom :</span>
+                                <input type="text" placeholder="Ben Ali" required>
+                            </label>
+
+                            <label>
+                                <span>Adresse e-mail :</span>
+                                <input type="email" placeholder="marouabenali@email.com" required>
+                            </label>
+
+                            <label>
+                                <span>Téléphone :</span>
+                                <input type="tel" placeholder="06 12 00 00 00" required>
+                            </label>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="prev-btn" onclick="prevStep()">Précédent</button>
+                            <button type="button" class="next-btn" onclick="nextStep()">Suivant</button>
+                        </div>
+                    </div>
+
+                    <!-- Étape 3 -->
+                    <div class="form-step">
+                        <div class="confirmation-container">
+                            <img src="images/icon.png" alt="Confirmation Icon">
+                            <h2>Confirmation</h2>
+                            <p>Merci pour votre demande de rendez-vous. Un conseiller vous contactera dans les plus brefs délais pour confirmer votre rendez-vous.</p>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="prev-btn" onclick="prevStep()">Précédent</button>
+                            <button type="submit" class="submit-btn">Confirmer la demande</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
