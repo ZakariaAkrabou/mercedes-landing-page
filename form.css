@@ -79,6 +79,7 @@ p {
     box-shadow: 0 6px 12px rgba(0, 120, 214, 0.4);
 }
 
+/* Style du modal */
 .modal {
     display: none;
     position: fixed;
@@ -125,6 +126,7 @@ p {
     height: 100%;
 }
 
+/* Barres de progression segmentées */
 .progress-container {
     display: flex;
     align-items: center;
@@ -309,6 +311,7 @@ p {
     line-height: 1.6;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .modal-content {
         flex-direction: column;

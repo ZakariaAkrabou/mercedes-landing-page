@@ -79,7 +79,7 @@ document.getElementById("multiStepForm").addEventListener("submit", function(eve
     submitBtn.disabled = true;
     
     setTimeout(() => {
-        alert("Votre demande de rendez-vous a bien été envoyée ");
+        alert("Votre demande de rendez-vous a bien été envoyée ! ");
         closeModal({target: document.getElementById('modal')});
         
         this.reset();
