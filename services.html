@@ -187,44 +187,41 @@
                         <button type="button" class="submit-btn" id="next-to-step2">Suivant <i class="fa-solid fa-circle-arrow-right"></i></button>
                     </form>
 
-                    <form id="rdv-form-step2" class="form-step" style="display: none;">
+                    <form id="rdv-form-step2" class="form-step">
                         <div class="form-group">
-                            <label for="immatriculation">Immatriculation du véhicule <span
-                                    class="required">*</span></label>
-                            <input type="text" id="immatriculation" class="form-control" required>
+                          <label for="immatriculation">Immatriculation du véhicule <span class="required" style = "color: red;">*</span></label>
+                          <input type="text" id="immatriculation" class="form-control" required>
                         </div>
-
+                      
                         <div class="form-group">
-                            <label for="modele">Modèle du véhicule <span class="required">*</span></label>
-                            <input type="text" id="modele" class="form-control" required>
+                          <label for="modele">Modèle du véhicule <span class="required" style = "color: red;">*</span></label>
+                          <input type="text" id="modele" class="form-control" required>
                         </div>
-
+                      
                         <div class="form-group">
-                            <label for="kilometrage">Kilométrage du véhicule <span class="required">*</span></label>
-                            <input type="number" id="kilometrage" class="form-control" required>
+                          <label for="kilometrage">Kilométrage du véhicule <span class="required" style = "color: red;">*</span></label>
+                          <input type="number" id="kilometrage" class="form-control" required>
                         </div>
-
+                      
                         <div class="form-group">
-                            <label for="point-vente">Choisissez votre point de vente <span
-                                    class="required">*</span></label>
-                            <select id="point-vente" class="form-select" required>
-                                <option value="" selected disabled>Veuillez sélectionner...</option>
-                                <option value="paris">Paris</option>
-                                <option value="lyon">Lyon</option>
-                                <option value="marseille">Marseille</option>
-                            </select>
+                          <label for="point-vente">Choisissez votre point de vente <span class="required" style = "color: red;">*</span></label>
+                          <select id="point-vente" class="form-select" required>
+                            <option value="" selected disabled>Veuillez sélectionner...</option>
+                            <option value="paris">Paris</option>
+                            <option value="lyon">Lyon</option>
+                            <option value="marseille">Marseille</option>
+                          </select>
                         </div>
-
                       
                         <div class="button-container">
-                            <button type="button" class="submit-btn" id="retour-step1">
-                                <i class="fa-solid fa-circle-arrow-left"></i> Retour
-                            </button>
-                            <button type="submit" class="submit-btn">
-                                Terminer <i class="fa-solid fa-circle-arrow-right"></i>
-                            </button>
+                          <button type="button" class="submit-btn" id="retour-step1">
+                            <i class="fa-solid fa-circle-arrow-left"></i> Retour
+                          </button>
+                          <button type="submit" class="submit-btn">
+                            Terminer <i class="fa-solid fa-circle-arrow-right"></i>
+                          </button>
                         </div>
-                    </form>
+                      </form>
                 </div>
             </div>
         </div>
@@ -232,31 +229,40 @@
     </section>
 
     <script>
-        const openBtn = document.getElementById('open-modal-btn');
-        const modal = document.getElementById('rdv-modal');
-        const nextToStep2 = document.getElementById('next-to-step2');
-        const retourStep1 = document.getElementById('retour-step1');
-        const step1Form = document.getElementById('rdv-form-step1');
-        const step2Form = document.getElementById('rdv-form-step2');
-        const stepElements = document.querySelectorAll('.step');
+       const openBtn = document.getElementById('open-modal-btn');
+const modal = document.getElementById('rdv-modal');
+const nextToStep2 = document.getElementById('next-to-step2');
+const retourStep1 = document.getElementById('retour-step1');
+const step1Form = document.getElementById('rdv-form-step1');
+const step2Form = document.getElementById('rdv-form-step2');
+const stepElements = document.querySelectorAll('.step');
 
-        openBtn.addEventListener('click', () => {
-            modal.style.display = 'flex';
-        });
+// Initialize - show only step 1
+step1Form.classList.add('active');
+step2Form.classList.remove('active');
 
-        nextToStep2.addEventListener('click', () => {
-            step1Form.style.display = 'none';
-            step2Form.style.display = 'block';
-            stepElements[0].classList.remove('active');
-            stepElements[1].classList.add('active');
-        });
+openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
 
-        retourStep1.addEventListener('click', () => {
-            step2Form.style.display = 'none';
-            step1Form.style.display = 'block';
-            stepElements[1].classList.remove('active');
-            stepElements[0].classList.add('active');
-        });
+nextToStep2.addEventListener('click', () => {
+    // Validate step 1 before proceeding
+    if (step1Form.checkValidity()) {
+        step1Form.classList.remove('active');
+        step2Form.classList.add('active');
+        stepElements[0].classList.remove('active');
+        stepElements[1].classList.add('active');
+    } else {
+        step1Form.reportValidity();
+    }
+});
+
+retourStep1.addEventListener('click', () => {
+    step2Form.classList.remove('active');
+    step1Form.classList.add('active');
+    stepElements[1].classList.remove('active');
+    stepElements[0].classList.add('active');
+});
     </script>
 </body>
 
