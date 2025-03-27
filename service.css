@@ -491,28 +491,19 @@ hr.thick {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  gap: 15px;
   padding: 0 15px;
 }
 
 .form-group label {
-  flex: 0 0 20%;
+  flex: 0 0 30%; /* Same width as step 1 labels */
   text-align: left;
   font-family: Arial, sans-serif;
-  margin-bottom: 0;
   font-size: 13px;
   color: #333;
   font-weight: bold;
 }
 
-.form-control {
-  flex: 0 0 75%;
-  padding: 6px 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  height: 32px;
-  font-size: 13px;
-}
+
 .form-group input {
   border-radius: 10px;
 }
@@ -520,13 +511,12 @@ hr.thick {
   border-radius: 10px;
 }
 
-.form-select {
-  flex: 0 0 75%;
-  padding: 6px 10px;
+.form-control, .form-select {
+  flex: 1;
+  padding: 8px 12px;
   border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  background-color: white;
-  height: 32px;
+  border-radius: 10px;
+  height: 36px;
   font-size: 13px;
 }
 
@@ -596,9 +586,23 @@ hr.thick {
     background-color: #5a6268;
 }
 
-
+.form-step {
+  display: none;
+  width: 100%;
+  padding: 0 15px; 
+}
+.form-step.active {
+  display: block; /* Only show active step */
+}
 #rdv-form-step2 .button-container {
-    text-align: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 0 15px;
 }
 
+#rdv-form-step2 .submit-btn {
+  margin: 0;
+  padding: 10px 25px;
+}
