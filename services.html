@@ -10,6 +10,119 @@
 </head>
 
 <body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="images/mercedes-benz-icon.png" alt="Mercedes-Benz logo"></a>
+            <a class="link-header" href="#">
+                <p>Mercedes-Benz</p>
+            </a>
+        </div>
+        <hr class="thick">
+
+        <nav class="navigation">
+            <ul class="nav-menu">
+                <li class="has-sub">
+                    <a href="#">Nos modèles</a>
+                    <ul class="dropdown">
+                        <li class="has-sub category-compact">
+                            <a href="#">Compacte <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Classe A</a></li>
+                                <li><a href="#">Classe B</a></li>
+                                <li><a href="#">CLA</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub category-berline">
+                            <a href="#">Berlines <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Classe C</a></li>
+                                <li><a href="#">Classe E</a></li>
+                                <li><a href="#">Classe S</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub category-suv">
+                            <a href="#">SUV/Tout-terrains <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">GLA</a></li>
+                                <li><a href="#">GLC</a></li>
+                                <li><a href="#">GLE</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub category-coupe">
+                            <a href="#">Coupés <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Coupé CLA</a></li>
+                                <li><a href="#">Coupé GLC</a></li>
+                                <li><a href="#">AMG GT</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub category-cabriolet">
+                            <a href="#">Cabriolets/Roadsters <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Classe C Cabriolet</a></li>
+                                <li><a href="#">Classe E Cabriolet</a></li>
+                                <li><a href="#">SL</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub category-monospace">
+                            <a href="#">Monospaces <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Classe V</a></li>
+                                <li><a href="#">EQV</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub category-electrique">
+                            <a href="#">Véhicules électriques <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">EQA</a></li>
+                                <li><a href="#">EQB</a></li>
+                                <li><a href="#">EQC</a></li>
+                                <li><a href="#">EQS</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub category-utilitaire">
+                            <a href="#">Véhicules utilitaires légers <span class="arrow">▶</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sprinter</a></li>
+                                <li><a href="#">Vito</a></li>
+                                <li><a href="#">Citan</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has-sub"><a href="#">Conseils d'achat</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Acheter un véhiculre</a></li>
+                        <li><a href="#">Demander un essai</a></li>
+                        <li><a href="#">offer du moment</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-sub"><a href="#">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="/services.html     ">Reserver un rendez-vous</a></li>
+                        <li><a href="#">Accessires</a></li>
+                        <li><a href="#">Collections</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-sub"><a href="#">Notre marque</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Mercedes-Maybach</a></li>
+                        <li><a href="#">class G</a></li>
+                    </ul>
+                </li>
+                <li class="has-sub"><a href="#">Technologie</a>
+                    <ul class="dropdown">
+                        <li><a href="#">MBUX</a></li>
+                        <li><a href="#">Vision EQXX</a></li>
+                        <li><a href="#">Concept Cars</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main class="services-main">
         <div class="service-container">
             <div class="mercedes-logo">
@@ -74,44 +187,41 @@
                         <button type="button" class="submit-btn" id="next-to-step2">Suivant <i class="fa-solid fa-circle-arrow-right"></i></button>
                     </form>
 
-                    <form id="rdv-form-step2" class="form-step" style="display: none;">
+                    <form id="rdv-form-step2" class="form-step">
                         <div class="form-group">
-                            <label for="immatriculation">Immatriculation du véhicule <span
-                                    class="required">*</span></label>
-                            <input type="text" id="immatriculation" class="form-control" required>
+                          <label for="immatriculation">Immatriculation du véhicule <span class="required" style = "color: red;">*</span></label>
+                          <input type="text" id="immatriculation" class="form-control" required>
                         </div>
-
+                      
                         <div class="form-group">
-                            <label for="modele">Modèle du véhicule <span class="required">*</span></label>
-                            <input type="text" id="modele" class="form-control" required>
+                          <label for="modele">Modèle du véhicule <span class="required" style = "color: red;">*</span></label>
+                          <input type="text" id="modele" class="form-control" required>
                         </div>
-
+                      
                         <div class="form-group">
-                            <label for="kilometrage">Kilométrage du véhicule <span class="required">*</span></label>
-                            <input type="number" id="kilometrage" class="form-control" required>
+                          <label for="kilometrage">Kilométrage du véhicule <span class="required" style = "color: red;">*</span></label>
+                          <input type="number" id="kilometrage" class="form-control" required>
                         </div>
-
+                      
                         <div class="form-group">
-                            <label for="point-vente">Choisissez votre point de vente <span
-                                    class="required">*</span></label>
-                            <select id="point-vente" class="form-select" required>
-                                <option value="" selected disabled>Veuillez sélectionner...</option>
-                                <option value="paris">Paris</option>
-                                <option value="lyon">Lyon</option>
-                                <option value="marseille">Marseille</option>
-                            </select>
+                          <label for="point-vente">Choisissez votre point de vente <span class="required" style = "color: red;">*</span></label>
+                          <select id="point-vente" class="form-select" required>
+                            <option value="" selected disabled>Veuillez sélectionner...</option>
+                            <option value="paris">Paris</option>
+                            <option value="lyon">Lyon</option>
+                            <option value="marseille">Marseille</option>
+                          </select>
                         </div>
-
                       
                         <div class="button-container">
-                            <button type="button" class="submit-btn" id="retour-step1">
-                                <i class="fa-solid fa-circle-arrow-left"></i> Retour
-                            </button>
-                            <button type="submit" class="submit-btn">
-                                Terminer <i class="fa-solid fa-circle-arrow-right"></i>
-                            </button>
+                          <button type="button" class="submit-btn" id="retour-step1">
+                            <i class="fa-solid fa-circle-arrow-left"></i> Retour
+                          </button>
+                          <button type="submit" class="submit-btn">
+                            Terminer <i class="fa-solid fa-circle-arrow-right"></i>
+                          </button>
                         </div>
-                    </form>
+                      </form>
                 </div>
             </div>
         </div>
@@ -119,31 +229,40 @@
     </section>
 
     <script>
-        const openBtn = document.getElementById('open-modal-btn');
-        const modal = document.getElementById('rdv-modal');
-        const nextToStep2 = document.getElementById('next-to-step2');
-        const retourStep1 = document.getElementById('retour-step1');
-        const step1Form = document.getElementById('rdv-form-step1');
-        const step2Form = document.getElementById('rdv-form-step2');
-        const stepElements = document.querySelectorAll('.step');
+       const openBtn = document.getElementById('open-modal-btn');
+const modal = document.getElementById('rdv-modal');
+const nextToStep2 = document.getElementById('next-to-step2');
+const retourStep1 = document.getElementById('retour-step1');
+const step1Form = document.getElementById('rdv-form-step1');
+const step2Form = document.getElementById('rdv-form-step2');
+const stepElements = document.querySelectorAll('.step');
 
-        openBtn.addEventListener('click', () => {
-            modal.style.display = 'flex';
-        });
+// Initialize - show only step 1
+step1Form.classList.add('active');
+step2Form.classList.remove('active');
 
-        nextToStep2.addEventListener('click', () => {
-            step1Form.style.display = 'none';
-            step2Form.style.display = 'block';
-            stepElements[0].classList.remove('active');
-            stepElements[1].classList.add('active');
-        });
+openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
 
-        retourStep1.addEventListener('click', () => {
-            step2Form.style.display = 'none';
-            step1Form.style.display = 'block';
-            stepElements[1].classList.remove('active');
-            stepElements[0].classList.add('active');
-        });
+nextToStep2.addEventListener('click', () => {
+    // Validate step 1 before proceeding
+    if (step1Form.checkValidity()) {
+        step1Form.classList.remove('active');
+        step2Form.classList.add('active');
+        stepElements[0].classList.remove('active');
+        stepElements[1].classList.add('active');
+    } else {
+        step1Form.reportValidity();
+    }
+});
+
+retourStep1.addEventListener('click', () => {
+    step2Form.classList.remove('active');
+    step1Form.classList.add('active');
+    stepElements[1].classList.remove('active');
+    stepElements[0].classList.add('active');
+});
     </script>
 </body>
 
