@@ -147,36 +147,45 @@
                     <h2 class="modal-title">Demander un<br><span class="rdv-text">RDV SAV</span></h2>
 
                     <div class="progress-steps">
-                        <div class="step active" data-step="1">1</div>
+                        <div class="step completed" data-step="1">
+                            <span class="step-number">1</span>
+                            <i class="fa-solid fa-check step-check"></i>
+                        </div>
+                        <div class="step-line completed"></div>
+                        <div class="step active" data-step="2">
+                            <span class="step-number">2</span>
+                            <i class="fa-solid fa-check step-check"></i>
+                        </div>
                         <div class="step-line"></div>
-                        <div class="step" data-step="2">2</div>
-                        <div class="step-line"></div>
-                        <div class="step" data-step="3">3</div>
+                        <div class="step" data-step="3">
+                            <span class="step-number">3</span>
+                            <i class="fa-solid fa-check step-check"></i>
+                        </div>
                     </div>
 
                     <form id="rdv-form-step1" class="form-step active">
                         <div class="form-group">
-                            <label for="prenom">Prénom <span class="required" style="color: red;">*</span></label>
+                            <label for="prenom">Prénom *</label>
                             <input type="text" id="prenom" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="nom">Nom <span class="required"  style="color: red;">*</span></label>
+                            <label for="nom">Nom *</label>
                             <input type="text" id="nom" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">E-mail <span class="required" style="color: red;">*</span></label>
+                            <label for="email">E-mail *</label>
                             <input type="email" id="email" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="telephone">Téléphone <span class="required" style="color: red;">*</span></label>
+                            <label for="telephone">Téléphone *</label>
                             <input type="tel" id="telephone" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="civilite">Civilité <span class="required" style="color: red;">*</span></label>
+                            <label for="civilite">Civilité *</label>
                             <select id="civilite" class="form-select" required>
                                 <option value="" selected disabled>Veuillez sélectionner...</option>
                                 <option value="monsieur">Monsieur</option>
@@ -184,44 +193,53 @@
                             </select>
                         </div>
 
-                        <button type="button" class="submit-btn" id="next-to-step2">Suivant <i class="fa-solid fa-circle-arrow-right"></i></button>
+                        <div class="button-container">
+                            <button type="button" class="submit-btn" id="next-to-step2">Suivant</button>
+                        </div>
                     </form>
 
                     <form id="rdv-form-step2" class="form-step">
                         <div class="form-group">
-                          <label for="immatriculation">Immatriculation du véhicule <span class="required" style = "color: red;">*</span></label>
-                          <input type="text" id="immatriculation" class="form-control" required>
+                            <label for="immatriculation">Immatriculation du véhicule</label>
+                            <input type="text" id="immatriculation" class="form-control" required>
                         </div>
-                      
+
                         <div class="form-group">
-                          <label for="modele">Modèle du véhicule <span class="required" style = "color: red;">*</span></label>
-                          <input type="text" id="modele" class="form-control" required>
+                            <label for="modele">Modèle du véhicule</label>
+                            <input type="text" id="modele" class="form-control" required>
                         </div>
-                      
+
                         <div class="form-group">
-                          <label for="kilometrage">Kilométrage du véhicule <span class="required" style = "color: red;">*</span></label>
-                          <input type="number" id="kilometrage" class="form-control" required>
+                            <label for="kilometrage">Kilométrage du véhicule</label>
+                            <input type="number" id="kilometrage" class="form-control" required>
                         </div>
-                      
+
                         <div class="form-group">
-                          <label for="point-vente">Choisissez votre point de vente <span class="required" style = "color: red;">*</span></label>
-                          <select id="point-vente" class="form-select" required>
-                            <option value="" selected disabled>Veuillez sélectionner...</option>
-                            <option value="paris">Paris</option>
-                            <option value="lyon">Lyon</option>
-                            <option value="marseille">Marseille</option>
-                          </select>
+                            <label for="point-vente">Choisissez votre point de vente *</label>
+                            <select id="point-vente" class="form-select" required>
+                                <option value="" selected disabled>Veuillez sélectionner...</option>
+                                <option value="paris">Paris</option>
+                                <option value="lyon">Lyon</option>
+                                <option value="marseille">Marseille</option>
+                            </select>
                         </div>
-                      
+
                         <div class="button-container">
-                          <button type="button" class="submit-btn" id="retour-step1">
-                            <i class="fa-solid fa-circle-arrow-left"></i> Retour
-                          </button>
-                          <button type="submit" class="submit-btn">
-                            Terminer <i class="fa-solid fa-circle-arrow-right"></i>
-                          </button>
+                            <button type="button" class="btn-outline" id="retour-step1">Retour</button>
+                            <button type="button" class="submit-btn" id="next-to-step3">Terminer</button>
                         </div>
-                      </form>
+                    </form>
+
+                    <div id="rdv-form-step3" class="form-step">
+                        <div class="success-container">
+                            <div class="success-icon">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <h2>C'est terminé</h2>
+                            <p>It is a long established fact that a reader will be distracted by the readable content</p>
+                            <button type="button" class="btn-outline">Retour</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,40 +247,83 @@
     </section>
 
     <script>
-       const openBtn = document.getElementById('open-modal-btn');
-const modal = document.getElementById('rdv-modal');
-const nextToStep2 = document.getElementById('next-to-step2');
-const retourStep1 = document.getElementById('retour-step1');
-const step1Form = document.getElementById('rdv-form-step1');
-const step2Form = document.getElementById('rdv-form-step2');
-const stepElements = document.querySelectorAll('.step');
+        const openBtn = document.getElementById('open-modal-btn');
+        const modal = document.getElementById('rdv-modal');
+        const nextToStep2 = document.getElementById('next-to-step2');
+        const retourStep1 = document.getElementById('retour-step1');
+        const nextToStep3 = document.getElementById('next-to-step3');
+        const step1Form = document.getElementById('rdv-form-step1');
+        const step2Form = document.getElementById('rdv-form-step2');
+        const step3Form = document.getElementById('rdv-form-step3');
+        const stepElements = document.querySelectorAll('.step');
+        const stepLines = document.querySelectorAll('.step-line');
 
-// Initialize - show only step 1
-step1Form.classList.add('active');
-step2Form.classList.remove('active');
+        step1Form.classList.add('active');
+        step2Form.classList.remove('active');
+        step3Form.classList.remove('active');
+        stepElements[0].classList.add('active');
 
-openBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-});
+        function updateSteps(currentStep) {
+            stepElements.forEach((step, index) => {
+                if (index < currentStep) {
+                    step.classList.add('completed');
+                    step.classList.remove('active');
+                    if (index < stepElements.length - 1) {
+                        stepLines[index].classList.add('completed');
+                    }
+                } else if (index === currentStep) {
+                    step.classList.add('active');
+                    step.classList.remove('completed');
+                } else {
+                    step.classList.remove('active', 'completed');
+                    if (index > 0 && index <= stepLines.length) {
+                        stepLines[index - 1].classList.remove('completed');
+                    }
+                }
+            });
+        }
 
-nextToStep2.addEventListener('click', () => {
-    // Validate step 1 before proceeding
-    if (step1Form.checkValidity()) {
-        step1Form.classList.remove('active');
-        step2Form.classList.add('active');
-        stepElements[0].classList.remove('active');
-        stepElements[1].classList.add('active');
-    } else {
-        step1Form.reportValidity();
-    }
-});
+        openBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            updateSteps(0);
+        });
 
-retourStep1.addEventListener('click', () => {
-    step2Form.classList.remove('active');
-    step1Form.classList.add('active');
-    stepElements[1].classList.remove('active');
-    stepElements[0].classList.add('active');
-});
+        nextToStep2.addEventListener('click', () => {
+            if (step1Form.checkValidity()) {
+                step1Form.classList.remove('active');
+                step2Form.classList.add('active');
+                updateSteps(1);
+            } else {
+                step1Form.reportValidity();
+            }
+        });
+
+        retourStep1.addEventListener('click', () => {
+            step2Form.classList.remove('active');
+            step1Form.classList.add('active');
+            updateSteps(0);
+        });
+
+        nextToStep3.addEventListener('click', () => {
+            if (step2Form.checkValidity()) {
+                step2Form.classList.remove('active');
+                step3Form.classList.add('active');
+                updateSteps(2);
+            } else {
+                step2Form.reportValidity();
+            }
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+
+                step1Form.classList.add('active');
+                step2Form.classList.remove('active');
+                step3Form.classList.remove('active');
+                updateSteps(0);
+            }
+        });
     </script>
 </body>
 
